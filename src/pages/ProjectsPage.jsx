@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import { getAllProjects } from "../data/projectLoader";
@@ -8,6 +9,14 @@ const projects = getAllProjects();
 export default function ProjectsPage() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>Projects — DevaRaju Maddhu</title>
+        <meta name="description" content="Apps and tools built by DevaRaju Maddhu — from AI agents and legal tech to full-stack platforms." />
+        <meta property="og:title" content="Projects — DevaRaju Maddhu" />
+        <meta property="og:description" content="Apps and tools built by DevaRaju Maddhu — from AI agents and legal tech to full-stack platforms." />
+        <meta property="og:url" content="https://devarajumaddhu.dev/projects" />
+        <link rel="canonical" href="https://devarajumaddhu.dev/projects" />
+      </Helmet>
       <div className="section-title">
         <span className="accent-marker">&gt;</span>
         <h2 className="heading">Projects</h2>

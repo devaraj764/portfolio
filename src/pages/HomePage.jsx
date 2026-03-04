@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { BiFolder, BiBriefcase, BiBookOpen, BiRightArrowAlt } from "react-icons/bi";
 import PageTransition from "../components/PageTransition";
@@ -34,6 +35,14 @@ const highlights = [
 export default function HomePage() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>DevaRaju Maddhu — Full Stack Developer & AI Engineer</title>
+        <meta name="description" content="Full-stack developer building AI-native applications with Next.js, React, TypeScript, LangChain, and LangGraph. Experienced in agentic AI workflows and scalable systems." />
+        <meta property="og:title" content="DevaRaju Maddhu — Full Stack Developer & AI Engineer" />
+        <meta property="og:description" content="Full-stack developer building AI-native applications with Next.js, React, TypeScript, LangChain, and LangGraph. Experienced in agentic AI workflows and scalable systems." />
+        <meta property="og:url" content="https://devarajumaddhu.dev/" />
+        <link rel="canonical" href="https://devarajumaddhu.dev/" />
+      </Helmet>
       <div className="banner">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

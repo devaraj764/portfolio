@@ -3,6 +3,7 @@ import {
   BiPhoneCall,
   BiMap,
 } from "react-icons/bi";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import SocialLinks from "../components/SocialLinks";
@@ -27,6 +28,14 @@ const contactInfo = [
 export default function ContactPage() {
   return (
     <PageTransition>
+      <Helmet>
+        <title>Contact — DevaRaju Maddhu</title>
+        <meta name="description" content="Get in touch with DevaRaju Maddhu — full-stack developer and AI engineer based in Andhra Pradesh, India." />
+        <meta property="og:title" content="Contact — DevaRaju Maddhu" />
+        <meta property="og:description" content="Get in touch with DevaRaju Maddhu — full-stack developer and AI engineer based in Andhra Pradesh, India." />
+        <meta property="og:url" content="https://devarajumaddhu.dev/contact" />
+        <link rel="canonical" href="https://devarajumaddhu.dev/contact" />
+      </Helmet>
       <div className="section-title">
         <span className="accent-marker">&gt;</span>
         <h2 className="heading">Contact</h2>

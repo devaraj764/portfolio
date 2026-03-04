@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -24,8 +25,20 @@ export default function ProjectDetailPage() {
     );
   }
 
+  const pageTitle = `${project.title} — DevaRaju Maddhu`;
+  const pageDescription = project.excerpt || `Details about ${project.title} by DevaRaju Maddhu.`;
+  const pageUrl = `https://devarajumaddhu.dev/projects/${slug}`;
+
   return (
     <PageTransition>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={pageUrl} />
+        <link rel="canonical" href={pageUrl} />
+      </Helmet>
       <Link to="/projects" className="blog-post-back">
         <BiArrowBack size="18" /> Back to projects
       </Link>
