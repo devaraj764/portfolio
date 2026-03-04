@@ -1,0 +1,51 @@
+[
+    {
+        "title": "SDE-2 at AI4LEX (Italy)",
+        "description": "AI4LEX is a platform that provides AI-powered legal services. I worked as a Full-Stack Developer building scalable, production-grade applications using Next.js, React, TypeScript, and Java Spring Boot.",
+        "role": "At AI4LEX, I developed real-time features using WebSockets to enable live data synchronization across users and built AI-powered modules including RAG pipelines, contract analysis systems, and MCP-style AI servers. I designed and implemented Agentic AI workflows using LangChain and LangGraph, enabling multi-step reasoning, tool orchestration, and stateful execution within applications. Additionally, I contributed to DevOps processes, leveraging Docker and CI/CD pipelines to ensure reliable, efficient deployment and scalable system architecture.",
+        "worked_with": [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Java Spring Boot",
+            "WebSockets",
+            "LangChain",
+            "LangGraph",
+            "RAG Pipelines",
+            "MCP Servers",
+            "Docker",
+            "CI/CD"
+        ],
+        "visit_link": "https://www.ai4lex.com/",
+        "duration": "March 2025 - Present"
+    },
+    {
+        "title": "Full Stack Developer at Muzigal (Hyderabad)",
+        "description": "Muzigal is a platform for music learning, where students can learn music from the best teachers. I worked as a full stack developer, developing the UI and seamlessly integrating backend APIs.",
+        "role": "At Muzigal, I was entrusted with developing the UI and seamlessly integrating backend APIs. My responsibilities spanned crafting intuitive user interfaces while ensuring seamless connectivity with backend systems. Leveraging Node.js, I architected and implemented APIs to facilitate smooth communication between front-end and backend, ensuring a cohesive and efficient application experience for users.",
+        "worked_with": [
+            "React",
+            "Next.js",
+            "React Native",
+            "Node.js",
+            "JQuery"
+        ],
+        "visit_link": "https://www.muzigal.com/",
+        "duration": "Dec 2023 - Feb 2025"
+    },
+    {
+        "title": "Full Stack Developer at Edgroom Pvt Ltd (Vishakapatnam)",
+        "description": "Edgroom is a startup company where students, teachers, and institutions can collaborate with each other. Edgroom provides EdNews, EdBlogs, EdForms and EdWebinars to drive user engagement.",
+        "role": "Developed reusable UI React components for static interfaces, enabling efficient maintenance. Implemented client-side features for API interaction, facilitating dynamic content updates. Utilized Next.js Routing to enhance SEO, improving search engine visibility. Collaborated on optimization, achieving a 30% performance boost through efficient component usage and enhancements.",
+        "worked_with": [
+            "React",
+            "Next.js",
+            "Progressive Web Applications",
+            "AWS",
+            "API Integration",
+            "Web Scraping"
+        ],
+        "visit_link": "https://www.edgroom.com/",
+        "duration": "May 2022 - May 2023"
+    }
+]

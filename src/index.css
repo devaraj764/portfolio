@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg-primary: #0B0B14;
+  --bg-secondary: #12121e;
+  --bg-card: #16162a;
+  --border-color: #1e1e3a;
+  --text-primary: #e4e4ef;
+  --text-secondary: #8888a4;
+  --text-muted: #5c5c78;
+  --accent: #3b82f6;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+
+  /* Glassmorphism tokens */
+  --glass-bg: rgba(22, 22, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-blur: 12px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --gradient-accent: linear-gradient(135deg, #3b82f6, #06b6d4);
+  --navbar-height: 72px;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Plain anchor — no box, no background */
+a {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Button-like link (social links, card links) */
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  transition: all 0.2s ease;
+}
+
+.link-button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+body {
+  min-height: 100vh;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px;
+  padding-top: calc(var(--navbar-height) + 32px);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding-bottom: 80px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Galaxy background */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Nebula clouds */
+body::before {
+  background:
+    radial-gradient(ellipse 600px 400px at 15% 10%, rgba(59, 130, 246, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 350px at 85% 25%, rgba(99, 102, 241, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 60%, rgba(6, 182, 212, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 550px 400px at 20% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 450px 350px at 75% 75%, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+  animation: nebulaFloat 30s ease-in-out infinite alternate;
+}
+
+/* Starfield */
+body::after {
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.5px 1.5px at 40% 8%, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 85% 55%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 15% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 35% 75%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.5px 1.5px at 60% 85%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 48% 30%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 78% 42%, rgba(255,255,255,0.7), transparent),
+    radial-gradient(1px 1px at 20% 50%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 65% 65%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 92% 80%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1.5px 1.5px at 30% 92%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 50% 5%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 8% 40%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 42% 55%, rgba(59,130,246,0.6), transparent),
+    radial-gradient(1px 1px at 73% 92%, rgba(6,182,212,0.5), transparent);
+  animation: starsTwinkle 8s ease-in-out infinite alternate;
+}
+
+@keyframes nebulaFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-20px, 15px) scale(1.03); }
+}
+
+@keyframes starsTwinkle {
+  0%   { opacity: 0.6; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: var(--border-color);
+  margin: 48px 0;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.section-title .accent-marker {
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.text-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+button {
+  display: inline-flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: var(--bg-card);
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
