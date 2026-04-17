@@ -16,6 +16,7 @@ const ROUTES = [
   '/projects/ai4contracts',
   '/projects/indoqatar',
   '/projects/musoclef',
+  '/projects/rentalgaadi-management',
   '/blog/building-ai-agents',
   '/blog/building-legal-reasoning-agent',
   '/blog/building-rag-server',
