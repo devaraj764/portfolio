@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 3
 title: AI4Contracts — AI-Powered Contract Analysis Platform
 company: AI4LEX
 duration: AI4LEX

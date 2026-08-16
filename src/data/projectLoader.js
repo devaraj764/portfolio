@@ -24,6 +24,17 @@ function parseFrontMatter(raw) {
     data[key] = value;
   }
 
+  // Handle multiline or inline tags reliably
+  const tagsMatch = yamlBlock.match(/tags:\s*\[([\s\S]*?)\]/);
+  if (tagsMatch) {
+    data.tags = tagsMatch[1]
+      .split('\n')
+      .join('')
+      .split(',')
+      .map((s) => s.trim().replace(/^['"]|['"]$/g, ''))
+      .filter(Boolean);
+  }
+
   return { data, content };
 }
 

@@ -11,8 +11,10 @@ const ROUTES = [
   '/projects',
   '/blog',
   '/experience',
+  '/resume',
   '/contact',
-  '/projects/nyayasetu',
+  '/projects/vidhipilot',
+  '/projects/schedbee',
   '/projects/ai4contracts',
   '/projects/indoqatar',
   '/projects/musoclef',
@@ -42,20 +44,20 @@ const MIME_TYPES = {
 function startServer() {
   return new Promise((resolve) => {
     const server = createServer((req, res) => {
-      let filePath = join(DIST, req.url === '/' ? 'index.html' : req.url);
+      const parsedUrl = new URL(req.url, `http://localhost:${PORT}`);
+      let pathname = parsedUrl.pathname;
+      let filePath = join(DIST, pathname);
 
-      // SPA fallback: if file doesn't exist, serve index.html
-      if (!existsSync(filePath) || !extname(filePath)) {
+      if (!existsSync(filePath) || extname(pathname) === '') {
         filePath = join(DIST, 'index.html');
       }
 
       try {
         const content = readFileSync(filePath);
         const ext = extname(filePath);
-        res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'application/octet-stream' });
+        res.writeHead(200, { 'Content-Type': MIME_TYPES[ext] || 'text/html' });
         res.end(content);
       } catch {
-        // Fallback to index.html for SPA routes
         const content = readFileSync(join(DIST, 'index.html'));
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(content);

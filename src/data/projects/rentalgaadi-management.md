@@ -1,10 +1,11 @@
 ---
-order: 5
+order: 6
 title: RentalGaadi Management — Full-Stack Vehicle Rental Platform
 company: Personal Project
-duration: On Going
+duration: Completed
 tags: [Next.js, React, TypeScript, Vite, TanStack Router, Ant Design, Bun, Elysia, MongoDB, BullMQ, AWS S3, Flutter]
 excerpt: A complete vehicle rental ecosystem with a customer booking app, admin operations panel, Bun/Elysia backend APIs, background job workers, and a Flutter manager app.
+visit_link: http://rentalgaadi.com
 note: Multi-app monorepo with active development across frontend, backend, and ops workflows
 ---
 

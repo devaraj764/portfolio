@@ -8,6 +8,7 @@ import ProjectDetailPage from "./pages/ProjectDetailPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import ExperiencePage from "./pages/ExperiencePage";
+import ResumePage from "./pages/ResumePage";
 import ContactPage from "./pages/ContactPage";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="blog" element={<BlogPage />} />
         <Route path="blog/:slug" element={<BlogPostPage />} />
         <Route path="experience" element={<ExperiencePage />} />
+        <Route path="resume" element={<ResumePage />} />
         <Route path="contact" element={<ContactPage />} />
       </Route>
     </Routes>

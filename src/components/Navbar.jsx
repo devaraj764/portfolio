@@ -4,6 +4,7 @@ import {
   BiFolder,
   BiBookOpen,
   BiBriefcase,
+  BiFile,
   BiEnvelope,
 } from "react-icons/bi";
 
@@ -12,6 +13,7 @@ const links = [
   { to: "/projects", label: "Projects", icon: <BiFolder size="18" /> },
   { to: "/blog", label: "Blog", icon: <BiBookOpen size="18" /> },
   { to: "/experience", label: "Experience", icon: <BiBriefcase size="18" /> },
+  { to: "/resume", label: "Resume", icon: <BiFile size="18" /> },
   { to: "/contact", label: "Contact", icon: <BiEnvelope size="18" /> },
 ];
 

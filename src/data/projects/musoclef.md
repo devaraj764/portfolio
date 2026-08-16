@@ -1,11 +1,11 @@
 ---
-order: 4
+order: 5
 title: MusoClef — Online Music Education Platform
 company: Freelance
-duration: Ongoing
+duration: Completed
 tags: [Next.js, TypeScript, React, Tailwind CSS, MongoDB, NextAuth.js, Framer Motion, Docker, PM2]
 excerpt: An online music education platform offering personalized music classes for kids and adults, with interactive browser-based music tools, course management, and a full admin CMS.
-visit_link: http://demo.musoclef.com
+visit_link: http://www.musoclef.com
 ---
 
 ## Overview

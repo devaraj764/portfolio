@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 title: IndoQatar Real Estate — Full-Stack Property Platform
 company: IndoQatar Projects Pvt. Ltd.
 duration: Freelance

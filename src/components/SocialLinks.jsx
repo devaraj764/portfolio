@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import {
   BiLogoGmail,
   BiLogoLinkedinSquare,
   BiLogoGithub,
   BiPhoneCall,
+  BiFile
 } from "react-icons/bi";
 
 const socials = [
@@ -16,7 +18,7 @@ const socials = [
     label: "Email",
     icon: <BiLogoGmail size="18" />,
   },
-{
+  {
     href: "https://github.com/devaraj764",
     label: "GitHub",
     icon: <BiLogoGithub size="18" />,
@@ -31,6 +33,9 @@ const socials = [
 export default function SocialLinks() {
   return (
     <>
+      <Link to="/resume" className="link-button" style={{ background: "#2563eb", color: "#ffffff", border: "none" }}>
+        <BiFile size="18" /> Resume
+      </Link>
       {socials.map((s) => (
         <a
           key={s.label}
