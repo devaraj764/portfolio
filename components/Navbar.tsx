@@ -8,7 +8,6 @@ import {
   BiFolder,
   BiBookOpen,
   BiBriefcase,
-  BiFile,
   BiEnvelope,
   BiMenu,
   BiX,
@@ -19,7 +18,6 @@ const links = [
   { href: "/projects", label: "Projects", icon: <BiFolder size="18" /> },
   { href: "/blog", label: "Blog", icon: <BiBookOpen size="18" /> },
   { href: "/experience", label: "Experience", icon: <BiBriefcase size="18" /> },
-  { href: "/resume", label: "Resume", icon: <BiFile size="18" /> },
   { href: "/contact", label: "Contact", icon: <BiEnvelope size="18" /> },
 ];
 

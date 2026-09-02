@@ -406,6 +406,181 @@
   color: #fff;
 }
 
+/* ===== Resume PDF viewer (contact page) ===== */
+.resume-embed-card {
+  margin-top: 24px;
+}
+
+.pdf-viewer {
+  margin-top: 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.pdf-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(11, 11, 20, 0.75);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.pdf-page-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.pdf-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-zoom {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+}
+
+.pdf-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 28px;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.pdf-icon-btn:hover:not(:disabled) {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.pdf-icon-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.pdf-zoom-level {
+  min-width: 42px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.pdf-btn {
+  font-size: 0.82rem;
+  padding: 7px 13px;
+}
+
+.pdf-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+.pdf-btn-primary:hover {
+  color: #ffffff;
+}
+
+/* The neutral backdrop a PDF reader puts behind the sheets. */
+.pdf-scroll {
+  max-height: 78vh;
+  overflow: auto;
+  padding: 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.06), transparent 60%),
+    #0e0e18;
+  overscroll-behavior: contain;
+}
+
+.pdf-document {
+  display: flex;
+  flex-direction: column;
+  /* `safe center` keeps a zoomed-in sheet from clipping off the left edge of
+     the scroll container; browsers without it fall back to plain centering. */
+  align-items: center;
+  align-items: safe center;
+  gap: 20px;
+  /* Grow to the widest sheet so horizontal scrolling reaches its right edge. */
+  width: fit-content;
+  min-width: 100%;
+}
+
+.pdf-sheet {
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.pdf-sheet canvas {
+  display: block;
+}
+
+.pdf-sheet-skeleton {
+  width: min(100%, 880px);
+  aspect-ratio: 1 / 1.414;
+  border-radius: 6px;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.04) 30%,
+    rgba(255, 255, 255, 0.09) 50%,
+    rgba(255, 255, 255, 0.04) 70%
+  );
+  background-size: 200% 100%;
+  animation: pdf-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes pdf-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pdf-sheet-skeleton {
+    animation: none;
+  }
+}
+
+.pdf-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 48px 16px;
+  text-align: center;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  background: var(--bg-secondary);
+}
+
 /* ===== Footer ===== */
 .footer {
   margin-top: 80px;
@@ -465,6 +640,20 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+  .pdf-scroll {
+    max-height: 70vh;
+    padding: 12px;
+  }
+
+  .pdf-toolbar {
+    justify-content: center;
+  }
+
+  /* Icon-only buttons keep the toolbar on one row on narrow screens. */
+  .pdf-btn-label {
+    display: none;
+  }
+
   .banner {
     flex-direction: column-reverse;
     align-items: center;

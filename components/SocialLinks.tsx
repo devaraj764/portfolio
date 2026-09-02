@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   BiLogoGmail,
   BiLogoLinkedinSquare,
@@ -35,13 +34,15 @@ const socials = [
 export default function SocialLinks() {
   return (
     <>
-      <Link
-        href="/resume"
+      <a
+        href={site.resumePdf}
+        target="_blank"
+        rel="noopener noreferrer"
         className="link-button"
         style={{ background: "#2563eb", color: "#ffffff", border: "none" }}
       >
         <BiFile size="18" /> Resume
-      </Link>
+      </a>
       {socials.map((s) => {
         const external = s.href.startsWith("http");
         return (

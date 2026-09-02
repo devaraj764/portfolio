@@ -8,6 +8,8 @@ const config = [
       ".open-next/**",
       ".wrangler/**",
       "node_modules/**",
+      // Vendored pdf.js build output, not our source.
+      "public/pdfjs/**",
       "cloudflare-env.d.ts",
       "next-env.d.ts",
     ],

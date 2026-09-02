@@ -3,10 +3,11 @@ import { BiEnvelope, BiPhoneCall, BiMap } from "react-icons/bi";
 
 import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
+import ResumeViewer from "@/components/ResumeViewer";
 import SocialLinks from "@/components/SocialLinks";
 import { site } from "@/lib/site";
 
-const description = `Get in touch with ${site.name} — full-stack developer and AI engineer based in ${site.location}.`;
+const description = `Get in touch with ${site.name} — full-stack developer and AI engineer based in ${site.location}. View or download the resume.`;
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -76,6 +77,16 @@ export default function ContactPage() {
           </div>
         </Reveal>
       </div>
+
+      <Reveal className="exp-card resume-embed-card" delay={0.2}>
+        <h3 className="exp-card-title" id="resume">
+          Resume
+        </h3>
+        <ResumeViewer
+          file={site.resumePdf}
+          downloadName="DevaRaju_Maddhu_Resume.pdf"
+        />
+      </Reveal>
     </PageTransition>
   );
 }
