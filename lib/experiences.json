@@ -1,13 +1,12 @@
 [
     {
         "title": "SDE-2 at AI4LEX (Italy)",
-        "description": "AI4LEX is a platform that provides AI-powered legal services. I worked as a Full-Stack Developer building scalable, production-grade applications using Next.js, React, TypeScript, and Java Spring Boot.",
+        "description": "AI4LEX is a platform that provides AI-powered legal services. I worked as a Full-Stack Developer building scalable, production-grade applications using Next.js, React, and TypeScript.",
         "role": "At AI4LEX, I developed real-time features using WebSockets to enable live data synchronization across users and built AI-powered modules including RAG pipelines, contract analysis systems, and MCP-style AI servers. I designed and implemented Agentic AI workflows using LangChain and LangGraph, enabling multi-step reasoning, tool orchestration, and stateful execution within applications. Additionally, I contributed to DevOps processes, leveraging Docker and CI/CD pipelines to ensure reliable, efficient deployment and scalable system architecture.",
         "worked_with": [
             "Next.js",
             "React",
             "TypeScript",
-            "Java Spring Boot",
             "WebSockets",
             "LangChain",
             "LangGraph",

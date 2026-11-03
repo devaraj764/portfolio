@@ -15,7 +15,7 @@ const socials = [
     icon: <BiLogoLinkedinSquare size="18" />,
   },
   {
-    href: `mailto:${site.email}`,
+    href: "/contact#contact-form-title",
     label: "Email",
     icon: <BiLogoGmail size="18" />,
   },
@@ -38,8 +38,7 @@ export default function SocialLinks() {
         href={site.resumePdf}
         target="_blank"
         rel="noopener noreferrer"
-        className="link-button"
-        style={{ background: "#2563eb", color: "#ffffff", border: "none" }}
+        className="link-button resume-button"
       >
         <BiFile size="18" /> Resume
       </a>

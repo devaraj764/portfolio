@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BiEnvelope, BiPhoneCall, BiMap } from "react-icons/bi";
 
+import ContactForm from "@/components/ContactForm";
 import PageTransition from "@/components/PageTransition";
 import Reveal from "@/components/Reveal";
 import ResumeViewer from "@/components/ResumeViewer";
@@ -24,7 +25,7 @@ const contactInfo = [
   {
     icon: <BiEnvelope size="20" />,
     label: site.email,
-    href: `mailto:${site.email}`,
+    href: "#contact-form-title",
   },
   {
     icon: <BiPhoneCall size="20" />,
@@ -45,7 +46,10 @@ export default function ContactPage() {
         <h2 className="heading">Contact</h2>
       </div>
 
+      <div className="contact-page-intro"><div className="eyebrow">IDEAS START WITH A HELLO</div><h1>Let&apos;s build something great<span className="hero-period">.</span></h1><p>Have a project in mind or want to connect? I&apos;d love to hear from you.</p></div>
       <div className="contact-grid">
+        <Reveal className="contact-form-card"><ContactForm /></Reveal>
+        <div className="contact-sidebar">
         <Reveal className="exp-card">
           <h3 className="exp-card-title" style={{ marginBottom: 20 }}>
             Get in Touch
@@ -63,9 +67,6 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <a href={`mailto:${site.email}`} className="contact-cta">
-            <BiEnvelope size="20" /> Send Email
-          </a>
         </Reveal>
 
         <Reveal className="exp-card" delay={0.1}>
@@ -76,6 +77,7 @@ export default function ContactPage() {
             <SocialLinks />
           </div>
         </Reveal>
+        </div>
       </div>
 
       <Reveal className="exp-card resume-embed-card" delay={0.2}>

@@ -14,11 +14,13 @@
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "generate:content": "node scripts/generate-content.mjs",
-    "copy:pdf-worker": "node scripts/copy-pdf-worker.mjs"
+    "copy:pdf-worker": "node scripts/copy-pdf-worker.mjs",
+    "test:contact": "node tests/contact.test.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.23.31",
     "next": "16.3.3",
+    "nodemailer": "^10.3.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
@@ -31,6 +33,7 @@
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.20.4",
     "@types/node": "^22.10.0",
+    "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "eslint": "^9.18.0",

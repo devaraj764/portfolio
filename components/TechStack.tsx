@@ -31,6 +31,14 @@ import {
   SiBun,
   SiPrisma,
   SiPm2,
+  SiPython,
+  SiRedis,
+  SiRabbitmq,
+  SiFlutter,
+  SiFfmpeg,
+  SiGooglecloud,
+  SiCloudflare,
+  SiShadcnui,
 } from "react-icons/si";
 import {
   FaBullseye,
@@ -39,10 +47,9 @@ import {
   FaServer,
   FaProjectDiagram,
   FaDatabase,
+  FaJava,
+  FaFilm,
 } from "react-icons/fa";
-import {
-  AiOutlineQuestion,
-} from "react-icons/ai";
 
 import Reveal from "./Reveal";
 
@@ -57,6 +64,8 @@ const categories: Category[] = [
       { title: "CSS", logo: <BiLogoCss3 size="18" /> },
       { title: "JavaScript", logo: <BiLogoJavascript size="18" /> },
       { title: "TypeScript", logo: <BiLogoTypescript size="18" /> },
+      { title: "Python", logo: <SiPython size="18" /> },
+      { title: "Java", logo: <FaJava size="18" /> },
     ],
   },
   {
@@ -65,9 +74,10 @@ const categories: Category[] = [
       { title: "React", logo: <BiLogoReact size="18" /> },
       { title: "Next.js", logo: <TbBrandNextjs size="18" /> },
       { title: "Tailwind CSS", logo: <BiLogoTailwindCss size="18" /> },
-      { title: "ShadCN UI", logo: <AiOutlineQuestion size="18" /> },
+      { title: "ShadCN UI", logo: <SiShadcnui size="18" /> },
       { title: "Redux", logo: <BiLogoRedux size="18" /> },
       { title: "React Native", logo: <TbBrandReactNative size="18" /> },
+      { title: "Flutter", logo: <SiFlutter size="18" /> },
       { title: "Framer Motion", logo: <TbBrandFramerMotion size="18" /> },
       { title: "TanStack Table", logo: <SiTablecheck size="18" /> },
     ],
@@ -77,6 +87,8 @@ const categories: Category[] = [
     items: [
       { title: "Node.js", logo: <BiLogoNodejs size="18" /> },
       { title: "Express.js", logo: <SiExpress size="18" /> },
+      { title: "FastAPI", logo: <FaServer size="18" /> },
+      { title: "RabbitMQ", logo: <SiRabbitmq size="18" /> },
       { title: "WebSockets", logo: <SiSocketdotio size="18" /> },
       { title: "BullMQ", logo: <FaBullseye size="18" /> },
       { title: "Bun.js", logo: <SiBun size="18" /> },
@@ -87,6 +99,8 @@ const categories: Category[] = [
     items: [
       { title: "PostgreSQL", logo: <BiLogoPostgresql size="18" /> },
       { title: "MongoDB", logo: <BiLogoMongodb size="18" /> },
+      { title: "Redis", logo: <SiRedis size="18" /> },
+      { title: "Qdrant", logo: <FaDatabase size="18" /> },
       { title: "Firebase", logo: <BiLogoFirebase size="18" /> },
       { title: "Prisma", logo: <SiPrisma size="18" /> },
       { title: "Drizzle", logo: <FaDatabase size="18" /> },
@@ -101,6 +115,23 @@ const categories: Category[] = [
       { title: "RAG Systems", logo: <FaBrain size="18" /> },
       { title: "MCP Servers", logo: <FaServer size="18" /> },
       { title: "CoT Reasoning", logo: <FaBrain size="18" /> },
+      { title: "OpenAI Integrations", logo: <FaBrain size="18" /> },
+      { title: "Google Vertex AI", logo: <SiGooglecloud size="18" /> },
+    ],
+  },
+  {
+    label: "Cloud & Deployment",
+    items: [
+      { title: "AWS", logo: <BiLogoAws size="18" /> },
+      { title: "Cloudflare R2", logo: <SiCloudflare size="18" /> },
+      { title: "Google Cloud Run", logo: <SiGooglecloud size="18" /> },
+    ],
+  },
+  {
+    label: "Video & Animation",
+    items: [
+      { title: "Remotion", logo: <FaFilm size="18" /> },
+      { title: "FFmpeg", logo: <SiFfmpeg size="18" /> },
     ],
   },
   {
@@ -110,7 +141,6 @@ const categories: Category[] = [
       { title: "Git", logo: <BiLogoGit size="18" /> },
       { title: "VS Code", logo: <BiLogoVisualStudio size="18" /> },
       { title: "PM2", logo: <SiPm2 size="18" /> },
-      { title: "AWS", logo: <BiLogoAws size="18" /> },
       { title: "CI/CD", logo: <TbRobot size="18" /> },
     ],
   },

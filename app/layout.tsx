@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar";
+import MotionProvider from "@/components/MotionProvider";
 import { site } from "@/lib/site";
 
 import "@/styles/globals.css";
 import "@/styles/app.css";
 import "@/styles/blog.css";
+import "@/styles/enhancements.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -58,18 +61,20 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+      <body id="page-top" suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <div className="glow-orb glow-orb-1" />
-        <div className="glow-orb glow-orb-2" />
-        <div className="site-shell">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <MotionProvider>
+          <ScrollProgress />
+          <div className="site-shell">
+            <a href="#main-content" className="skip-link">Skip to content</a>
+            <Navbar />
+            <main id="main-content">{children}</main>
+            <Footer />
+          </div>
+        </MotionProvider>
       </body>
     </html>
   );

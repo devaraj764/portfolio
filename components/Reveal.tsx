@@ -2,6 +2,7 @@
 
 import type { CSSProperties, ReactNode } from "react";
 import { motion } from "framer-motion";
+import { useMotionDisabled } from "./MotionProvider";
 
 type RevealProps = {
   children: ReactNode;
@@ -29,6 +30,7 @@ export default function Reveal({
   className,
   style,
 }: RevealProps) {
+  const disabled = useMotionDisabled();
   const from = { opacity: 0, y, ...(scale !== undefined ? { scale } : {}) };
   const to = { opacity: 1, y: 0, ...(scale !== undefined ? { scale: 1 } : {}) };
 
@@ -36,11 +38,13 @@ export default function Reveal({
     <motion.div
       className={className}
       style={style}
-      initial={from}
-      {...(trigger === "view"
+      initial={disabled ? false : from}
+      {...(disabled
+        ? { animate: to }
+        : trigger === "view"
         ? { whileInView: to, viewport: { once: true, margin: "-40px" } }
         : { animate: to })}
-      transition={{ duration, delay }}
+      transition={{ duration: disabled ? 0 : duration, delay: disabled ? 0 : delay }}
     >
       {children}
     </motion.div>

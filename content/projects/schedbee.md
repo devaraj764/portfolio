@@ -6,14 +6,14 @@ duration: Ongoing
 tags: [React 19, TypeScript, Vite, Next.js 16, Tailwind CSS v4, Node.js, Express 5, Drizzle ORM, PostgreSQL, RabbitMQ, LangChain, LangGraph, OpenAI, Qdrant, Meta WhatsApp API, Docker]
 excerpt: An intelligent multi-tenant AI booking & business operations platform for local SMBs (clinics, salons, diagnostic centers, venues, home repair) featuring a 4-mode universal scheduling engine, multi-channel WhatsApp AI agent with human handoff, native Android background missed-call detector app, and dynamic website builder.
 github: https://github.com/devaraj764/schedbee
-demo: https://schedbee.web.app/login
+visit_link: https://schedbee.com
 ---
 
 An intelligent multi-tenant AI scheduling and business operations platform engineered specifically for local service businesses — clinics, salons, diagnostic centers, venues, home repair services, and professional consultants — to automate customer booking, messaging, missed call recovery, and practice operations across channels.
 
 > **"From missed phone calls to automated WhatsApp confirmations: SchedBee turns multi-channel customer inquiries into confirmed, scheduled business appointments — powered by a universal 4-mode scheduling engine and agentic AI."**
 
-- **Live Demo**: [schedbee.web.app](https://schedbee.web.app/login) _(Demo Account: `admin@schedbee.com` / `Schedbee123!`)_
+- **Live**: [schedbee.com](https://schedbee.com)
 - **GitHub**: [devaraj764/schedbee](https://github.com/devaraj764/schedbee)
 
 ![SchedBee Universal Booking & Management](/assets/schedbee/booking-schedbee.webp)

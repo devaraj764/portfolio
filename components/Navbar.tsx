@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import {
   BiHome,
   BiFolder,
-  BiBookOpen,
   BiBriefcase,
   BiEnvelope,
   BiMenu,
@@ -16,7 +15,6 @@ import {
 const links = [
   { href: "/", label: "Home", icon: <BiHome size="18" /> },
   { href: "/projects", label: "Projects", icon: <BiFolder size="18" /> },
-  { href: "/blog", label: "Blog", icon: <BiBookOpen size="18" /> },
   { href: "/experience", label: "Experience", icon: <BiBriefcase size="18" /> },
   { href: "/contact", label: "Contact", icon: <BiEnvelope size="18" /> },
 ];
@@ -42,6 +40,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
               className={`navbar-link${isActive(link.href) ? " navbar-link-active" : ""}`}
             >
               {link.icon}
@@ -54,18 +53,20 @@ export default function Navbar() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <BiX size="28" /> : <BiMenu size="28" />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="mobile-dropdown">
+        <div className="mobile-dropdown" id="mobile-navigation">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={closeMenu}
+              aria-current={isActive(link.href) ? "page" : undefined}
               className={`mobile-dropdown-link${
                 isActive(link.href) ? " mobile-dropdown-link-active" : ""
               }`}

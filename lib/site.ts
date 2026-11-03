@@ -9,6 +9,6 @@ export const site = {
   location: "Andhra Pradesh, India",
   linkedin: "https://www.linkedin.com/in/devaraj764/",
   github: "https://github.com/devaraj764",
-  banner: "/assets/banner.jpeg",
+  banner: "/assets/banner.webp",
   resumePdf: "/DevaRaju%20Maddhu%20Resume.pdf",
 } as const;

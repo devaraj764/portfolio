@@ -3,12 +3,31 @@
   "name": "portfolio",
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-08-21",
-  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
   "observability": {
     "enabled": true
+  },
+  "ratelimits": [
+    {
+      "name": "CONTACT_RATE_LIMITER",
+      "namespace_id": "982167",
+      "simple": {
+        "limit": 3,
+        "period": 60
+      }
+    }
+  ],
+  "vars": {
+    "SMTP_FROM": "contact@devaraju.dev",
+    "SMTP_HOST": "smtp.purelymail.com",
+    "SMTP_PORT": "465",
+    "SMTP_USER": "contact@devaraju.dev"
   }
 }

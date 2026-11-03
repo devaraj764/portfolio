@@ -29,7 +29,6 @@ function serialize(exportName, entries) {
 }
 
 const projects = readCollection("projects");
-const posts = readCollection("blog");
 
 mkdirSync(dirname(OUT_FILE), { recursive: true });
 writeFileSync(
@@ -39,11 +38,10 @@ writeFileSync(
     "// Regenerated on every `npm run build` / `npm run dev`.",
     "",
     serialize("projectFiles", projects),
-    serialize("postFiles", posts),
   ].join("\n"),
   "utf-8",
 );
 
 console.log(
-  `generate-content: embedded ${projects.length} projects, ${posts.length} posts -> lib/generated/content-files.ts`,
+  `generate-content: embedded ${projects.length} projects -> lib/generated/content-files.ts`,
 );
